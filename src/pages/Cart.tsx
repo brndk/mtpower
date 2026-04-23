@@ -36,7 +36,15 @@ export const Cart: React.FC = () => {
               className="glass-card p-6 rounded-2xl flex flex-col md:flex-row items-center md:items-stretch space-y-6 md:space-y-0 md:space-x-8"
             >
               <div className="w-32 h-32 rounded-xl overflow-hidden flex-shrink-0">
-                <img src={item.image} className="w-full h-full object-cover" alt={item.name} />
+                <img 
+                  src={item.image} 
+                  className="w-full h-full object-cover" 
+                  alt={item.name} 
+                  referrerPolicy="no-referrer"
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1594106182463-759c60473528?q=80&w=800';
+                  }}
+                />
               </div>
               <div className="flex-1 text-center md:text-left">
                 <div className="flex justify-between items-start mb-2">

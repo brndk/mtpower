@@ -6,7 +6,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     name: 'Elegance - 2 Front',
     description: 'Premier 3-way floor-standing stereo speaker system with silk tweeter and high-excursion woofers.',
     price: 1850,
-    image: 'https://images.unsplash.com/photo-1550939810-cb345b2f4ad7?q=80&w=800&auto=format&fit=crop',
+    image: 'http://mtpoweraudio.co.uk/images/catalog/Elegance_2_FRONT.jpg',
     category: 'Floorstanding',
     specs: [
       { label: 'Drivers', value: '1" Silk Tweeter, 3x5.25" Mid, 8" Woofer' },
