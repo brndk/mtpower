@@ -6,6 +6,7 @@
 import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { AppProvider } from './store';
 import { Navbar } from './components/Navbar';
+import { FloatingCTA } from './components/FloatingCTA';
 import { Home } from './pages/Home';
 import { ProductDetails } from './pages/ProductDetails';
 import { Cart } from './pages/Cart';
@@ -15,7 +16,10 @@ export default function App() {
   return (
     <AppProvider>
       <Router>
-        <div className="flex min-h-screen bg-ash text-white">
+        <div className="flex min-h-screen bg-ash text-white relative">
+          {/* Floating CTA */}
+          <FloatingCTA />
+          
           {/* Sidebar */}
           <aside className="hidden lg:flex w-64 border-r border-white/10 flex-col p-8 bg-black sticky top-0 h-screen">
             <Link to="/" className="mb-12">
