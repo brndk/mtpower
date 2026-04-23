@@ -22,8 +22,11 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     let parsed: Product[] = saved ? JSON.parse(saved) : INITIAL_PRODUCTS;
     
     // Migration: Update Elegance Tower S7 to Elegance - 2 Front
-    if (parsed && parsed.length > 0 && parsed[0].id === '1' && (parsed[0].name === 'Elegance Tower S7' || parsed[0].image.includes('pult.ru') || parsed[0].image.includes('unsplash.com'))) {
-      parsed[0] = INITIAL_PRODUCTS[0];
+    if (parsed && parsed.length > 0 && parsed[0].id === '1') {
+      // Force update the image if it doesn't match the new one
+      if (parsed[0].image !== INITIAL_PRODUCTS[0].image || parsed[0].name !== INITIAL_PRODUCTS[0].name) {
+        parsed[0] = INITIAL_PRODUCTS[0];
+      }
     }
     
     return parsed;
