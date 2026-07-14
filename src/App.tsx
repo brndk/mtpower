@@ -29,12 +29,12 @@ export default function App() {
             </Link>
             
             <nav className="space-y-6 text-sm uppercase tracking-[0.2em]">
-              <Link to="/" className="block accent font-bold">Shop</Link>
-              <Link to="/cart" className="block text-white/50 hover:text-white transition-colors">Bag</Link>
+              <Link to="/" className="block accent font-bold">Магазин</Link>
+              <Link to="/cart" className="block text-white/50 hover:text-white transition-colors">Кошик</Link>
             </nav>
 
             <div className="mt-auto pt-8 border-t border-white/10">
-              <p className="text-[10px] text-white/30 uppercase tracking-[3px] mb-4">Newsletter</p>
+              <p className="text-[10px] text-white/30 uppercase tracking-[3px] mb-4">Новини</p>
               <div className="relative">
                 <input 
                   type="text" 
@@ -60,8 +60,8 @@ export default function App() {
              
              <footer className="h-16 bg-accent flex items-center justify-between px-6 md:px-10 text-black overflow-hidden mt-12">
                 <div className="flex gap-8 items-center font-bold text-[10px] md:text-xs uppercase tracking-widest whitespace-nowrap">
-                  <span>Hot Deal: Buy 2 Studio X1, Get 1 Sub 50% Off</span>
-                  <Link to="/" className="underline cursor-pointer italic">Claim Now</Link>
+                  <span>Гаряча пропозиція: Купіть 2 Studio X1, отримайте знижку 50% на сабвуфер</span>
+                  <Link to="/" className="underline cursor-pointer italic">Отримати зараз</Link>
                 </div>
              </footer>
           </div>

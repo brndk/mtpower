@@ -30,7 +30,7 @@ export const FloatingCTA: React.FC = () => {
           
           <ShoppingCart size={20} className="relative z-10" />
           <span className="relative z-10 text-xs uppercase tracking-[0.2em] font-black">
-            {cartCount > 0 ? `Checkout (${cartCount})` : 'Купити зараз'}
+            {cartCount > 0 ? `Оформити замовлення (${cartCount})` : 'Купити зараз'}
           </span>
 
           {/* Animated Background Gradient */}
@@ -44,7 +44,7 @@ export const FloatingCTA: React.FC = () => {
         {/* Floating tooltip/hint on hover */}
         <div className="absolute bottom-full right-0 mb-4 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap">
           <div className="bg-black/90 text-white text-[10px] uppercase tracking-widest px-3 py-2 rounded-lg border border-white/10 backdrop-blur-sm">
-            Premium Audio Experience
+            Преміальний звуковий досвід
           </div>
           <div className="w-2 h-2 bg-black/90 border-r border-b border-white/10 rotate-45 mx-auto mt-[-4px] ml-auto mr-8"></div>
         </div>

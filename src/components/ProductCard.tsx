@@ -53,7 +53,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
             onClick={() => addToCart(product)}
             className="btn-primary"
           >
-            Buy
+            Купити
           </button>
         </div>
       </div>

@@ -11,10 +11,10 @@ export const ProductDetails: React.FC = () => {
 
   if (!product) return (
     <div className="h-[70vh] flex flex-col items-center justify-center text-center">
-      <h2 className="serif text-4xl mb-4">Product Not Found</h2>
+      <h2 className="serif text-4xl mb-4">Товар не знайдено</h2>
       <Link to="/" className="accent text-xs uppercase tracking-widest flex items-center space-x-2">
         <ArrowLeft size={14} />
-        <span>Back to Store</span>
+        <span>Повернутися до магазину</span>
       </Link>
     </div>
   );
@@ -23,7 +23,7 @@ export const ProductDetails: React.FC = () => {
     <div className="p-4 md:p-10">
       <Link to="/" className="inline-flex items-center space-x-2 text-white/30 hover:text-accent transition-colors mb-12 text-[10px] uppercase tracking-widest font-bold">
         <ArrowLeft size={14} />
-        <span>Return to Selection</span>
+        <span>Повернутися до вибору</span>
       </Link>
       
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24">
@@ -76,7 +76,7 @@ export const ProductDetails: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-6 mb-16 border-t border-white/5 pt-12">
-            {product.specs.map((spec, i) => (
+            {(product.specs || []).map((spec, i) => (
               <div key={i} className="flex justify-between items-end border-b border-white/5 pb-2">
                 <span className="text-[10px] uppercase tracking-widest text-white/30 font-bold">{spec.label}</span>
                 <span className="text-sm font-medium italic serif">{spec.value}</span>
@@ -90,12 +90,12 @@ export const ProductDetails: React.FC = () => {
               className="w-full gold-gradient text-black font-bold py-6 rounded-none flex items-center justify-center space-x-4 text-xs uppercase tracking-[0.5em] active:scale-[0.99] transition-all"
             >
               <ShoppingCart size={16} />
-              <span>Add to Collection</span>
+              <span>Додати до колекції</span>
             </button>
             <div className="mt-6 flex justify-between items-center text-[9px] uppercase tracking-[2px] text-white/20 font-bold">
-               <span>Secure Transaction</span>
-               <span>Worldwide Courier Delivery</span>
-               <span>Authenticity Verified</span>
+               <span>Безпечна транзакція</span>
+               <span>Кур'єрська доставка по всьому світу</span>
+               <span>Автентичність підтверджена</span>
             </div>
           </div>
         </motion.div>

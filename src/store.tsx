@@ -18,23 +18,38 @@ const AppContext = createContext<AppContextType | undefined>(undefined);
 
 export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [products, setProducts] = useState<Product[]>(() => {
-    const saved = localStorage.getItem('mt_products');
-    let parsed: Product[] = saved ? JSON.parse(saved) : INITIAL_PRODUCTS;
-    
-    // Migration: Update Elegance Tower S7 to Elegance - 2 Front
-    if (parsed && parsed.length > 0 && parsed[0].id === '1') {
-      // Force update the image if it doesn't match the new one
-      if (parsed[0].image !== INITIAL_PRODUCTS[0].image || parsed[0].name !== INITIAL_PRODUCTS[0].name) {
-        parsed[0] = INITIAL_PRODUCTS[0];
+    try {
+      const saved = localStorage.getItem('mt_products');
+      if (!saved || saved === 'undefined') return INITIAL_PRODUCTS;
+      
+      let parsed: Product[] = JSON.parse(saved);
+      if (!Array.isArray(parsed)) parsed = INITIAL_PRODUCTS;
+      
+      // Migration: Update Elegance Tower S7 to Elegance - 2 Front
+      if (parsed && parsed.length > 0 && parsed[0] && parsed[0].id === '1') {
+        // Force update the image if it doesn't match the new one
+        if (parsed[0].image !== INITIAL_PRODUCTS[0].image || parsed[0].name !== INITIAL_PRODUCTS[0].name) {
+          parsed[0] = INITIAL_PRODUCTS[0];
+        }
       }
+      
+      return parsed;
+    } catch (e) {
+      console.error('Error parsing mt_products from localStorage', e);
+      return INITIAL_PRODUCTS;
     }
-    
-    return parsed;
   });
 
   const [cart, setCart] = useState<CartItem[]>(() => {
-    const saved = localStorage.getItem('mt_cart');
-    return saved ? JSON.parse(saved) : [];
+    try {
+      const saved = localStorage.getItem('mt_cart');
+      if (!saved || saved === 'undefined') return [];
+      const parsed = JSON.parse(saved);
+      return Array.isArray(parsed) ? parsed : [];
+    } catch (e) {
+      console.error('Error parsing mt_cart from localStorage', e);
+      return [];
+    }
   });
 
   useEffect(() => {

@@ -4,148 +4,148 @@ export const INITIAL_PRODUCTS: Product[] = [
   {
     id: '1',
     name: 'Elegance - 2 Front',
-    description: 'Premier 3-way floor-standing stereo speaker system with silk tweeter and high-excursion woofers.',
+    description: 'Преміальна 3-смугова підлогова стереоакустична система з шовковим твітером та довгохідними вуферами.',
     price: 1850,
     image: 'https://lh3.googleusercontent.com/u/0/d/1FuV8K3zEssogLSpw5exRrJ-5Z4Xw7pjo=w1000',
-    category: 'Floorstanding',
+    category: 'Підлогова',
     specs: [
-      { label: 'Drivers', value: '1" Silk Tweeter, 3x5.25" Mid, 8" Woofer' },
-      { label: 'Frequency Response', value: '35Hz - 25kHz' },
-      { label: 'Power Handling', value: '60W - 180W' },
-      { label: 'Impedance', value: '8 Ohms' }
+      { label: 'Динаміки', value: '1" шовковий твітер, 3x5.25" СЧ, 8" НЧ' },
+      { label: 'Частотна характеристика', value: '35Гц - 25кГц' },
+      { label: 'Потужність', value: '60Вт - 180Вт' },
+      { label: 'Опір', value: '8 Ом' }
     ]
   },
   {
     id: '2',
     name: 'Precision Bookshelf B3',
-    description: 'Compact high-performance speakers designed for critical listening in smaller rooms.',
+    description: 'Компактні високопродуктивні колонки, розроблені для критичного прослуховування в невеликих приміщеннях.',
     price: 1200,
     image: 'https://images.unsplash.com/photo-1583394838336-acd97773dbf9?q=80&w=800&auto=format&fit=crop',
-    category: 'Bookshelf',
+    category: 'Полична',
     specs: [
-      { label: 'Frequency Response', value: '45Hz - 25kHz' },
-      { label: 'Sensitivity', value: '87dB' },
-      { label: 'Impedance', value: '8 Ohms' }
+      { label: 'Частотна характеристика', value: '45Гц - 25кГц' },
+      { label: 'Чутливість', value: '87дБ' },
+      { label: 'Опір', value: '8 Ом' }
     ]
   },
   {
     id: '3',
     name: 'Titan Center C1',
-    description: 'The heart of your home theater. Exceptional vocal clarity and dynamic range.',
+    description: 'Серце вашого домашнього кінотеатру. Виняткова чіткість вокалу та динамічний діапазон.',
     price: 850,
     image: 'https://images.unsplash.com/photo-1594106182463-759c60473528?q=80&w=800&auto=format&fit=crop',
-    category: 'Center Channel',
+    category: 'Центральний канал',
     specs: [
-      { label: 'Drivers', value: 'Dual 6.5" woofers' },
-      { label: 'Power Handling', value: '200W' }
+      { label: 'Динаміки', value: 'Подвійні 6.5" НЧ-динаміки' },
+      { label: 'Потужність', value: '200Вт' }
     ]
   },
   {
     id: '4',
     name: 'Deep Bass Sub-X',
-    description: 'Active 12-inch subwoofer with 500W RMS amplifier for thunderous low-end.',
+    description: 'Активний 12-дюймовий сабвуфер з підсилювачем 500 Вт RMS для громового низькочастотного звуку.',
     price: 950,
     image: 'https://images.unsplash.com/photo-1544717297-fa95b3ee21f3?q=80&w=800&auto=format&fit=crop',
-    category: 'Subwoofer',
+    category: 'Сабвуфер',
     specs: [
-      { label: 'Driver', value: '12" Long-throw' },
-      { label: 'Amplifier', value: '500W Class D' }
+      { label: 'Динамік', value: '12" довгохідний' },
+      { label: 'Підсилювач', value: '500Вт Клас D' }
     ]
   },
   {
     id: '5',
     name: 'Classic Vinyl V1',
-    description: 'High-fidelity turntable with carbon-fiber tonearm and decoupled motor.',
+    description: 'Високоякісний програвач вінілу з тонармом з вуглецевого волокна та розв\'язаним двигуном.',
     price: 1800,
     image: 'https://images.unsplash.com/photo-1603048588665-791ca8aea617?q=80&w=800&auto=format&fit=crop',
-    category: 'Turntable',
+    category: 'Програвач',
     specs: [
-      { label: 'Drive', value: 'Belt Drive' },
-      { label: 'Speeds', value: '33/45 RPM' }
+      { label: 'Привід', value: 'Ремінний привід' },
+      { label: 'Швидкості', value: '33/45 об/хв' }
     ]
   },
   {
     id: '6',
     name: 'Studio Pro Monitor M8',
-    description: 'Reference-grade active monitors for professional audio production and mixing.',
+    description: 'Активні монітори еталонного класу для професійного аудіовиробництва та зведення.',
     price: 2200,
     image: 'https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?q=80&w=800&auto=format&fit=crop',
-    category: 'Monitors',
+    category: 'Монітори',
     specs: [
-      { label: 'Amp Type', value: 'Bi-amplified' },
-      { label: 'Inputs', value: 'XLR / TRS' }
+      { label: 'Тип підсилювача', value: 'Bi-amplified' },
+      { label: 'Входи', value: 'XLR / TRS' }
     ]
   },
   {
     id: '7',
     name: 'Acoustic Surround S2',
-    description: 'Immersive surround speakers with dipole/bipole switching technology.',
+    description: "Іммерсивні колонки об'ємного звучання з технологією перемикання диполь/біполь.",
     price: 650,
     image: 'https://images.unsplash.com/photo-1516280440614-37939bbacd81?q=80&w=800&auto=format&fit=crop',
-    category: 'Surround',
+    category: "Об'ємний звук",
     specs: [
-      { label: 'Type', value: 'Dipole' },
-      { label: 'Dispersion', value: 'Wide' }
+      { label: 'Тип', value: 'Диполь' },
+      { label: 'Дисперсія', value: 'Широка' }
     ]
   },
   {
     id: '8',
     name: 'Power Mono Block P1',
-    description: 'Ultra-low distortion monaural power amplifier providing 400W of pure power.',
+    description: 'Монауральний підсилювач потужності з наднизьким рівнем спотворень, що забезпечує 400 Вт чистої потужності.',
     price: 3200,
     image: 'https://images.unsplash.com/photo-1624514033330-fd9d66099351?q=80&w=800&auto=format&fit=crop',
-    category: 'Electronics',
+    category: 'Електроніка',
     specs: [
-      { label: 'Power', value: '400W @ 8 Ohms' },
-      { label: 'Class', value: 'Class A/B' }
+      { label: 'Потужність', value: '400Вт @ 8 Ом' },
+      { label: 'Клас', value: 'Клас A/B' }
     ]
   },
   {
     id: '9',
     name: 'Pure DAC Converter',
-    description: 'Audiophile-grade Digital-to-Analog converter with MQA support and native DSD.',
+    description: 'Цифро-аналоговий перетворювач аудіофільського класу з підтримкою MQA та нативним DSD.',
     price: 1400,
     image: 'https://images.unsplash.com/photo-1545648839-a9310c1448db?q=80&w=800&auto=format&fit=crop',
-    category: 'Electronics',
+    category: 'Електроніка',
     specs: [
-      { label: 'Resolution', value: '32-bit/768kHz' },
-      { label: 'Outputs', value: 'Balanced XLR' }
+      { label: 'Роздільна здатність', value: '32-біт/768кГц' },
+      { label: 'Виходи', value: 'Балансний XLR' }
     ]
   },
   {
     id: '10',
     name: 'Grand Signature G9',
-    description: 'Our ultimate statement in acoustic engineering. Hand-crafted wood finish.',
+    description: "Наш найкращий прояв акустичної інженерії. Дерев'яне оздоблення ручної роботи.",
     price: 12500,
     image: 'https://images.unsplash.com/photo-1558002038-1055907df827?q=80&w=800&auto=format&fit=crop',
-    category: 'Floorstanding',
+    category: 'Підлогова',
     specs: [
-      { label: 'Weight', value: '140 lbs' },
-      { label: 'Finish', value: 'Walnut / Piano Black' }
+      { label: 'Вага', value: '63 кг' },
+      { label: 'Оздоблення', value: 'Горіх / Рояльний лак' }
     ]
   },
   {
     id: '11',
     name: 'Modern One Active',
-    description: 'All-in-one wireless audio system with HDMI ARC and streaming capabilities.',
+    description: 'Бездротова аудіосистема "все-в-одному" з HDMI ARC та можливостями стрімінгу.',
     price: 2400,
     image: 'https://images.unsplash.com/photo-1546435770-a3e426bf472b?q=80&w=800&auto=format&fit=crop',
-    category: 'Wireless',
+    category: 'Бездротова',
     specs: [
-      { label: 'Streaming', value: 'AirPlay 2 / Spotify' },
-      { label: 'Power', value: '300W Total' }
+      { label: 'Стрімінг', value: 'AirPlay 2 / Spotify' },
+      { label: 'Потужність', value: '300Вт разом' }
     ]
   },
   {
     id: '12',
     name: 'Silver Link Cable',
-    description: 'High-purity silver speaker cables for the ultimate signal transparency.',
+    description: 'Акустичні кабелі з чистого срібла для максимальної прозорості сигналу.',
     price: 450,
     image: 'https://images.unsplash.com/photo-1542496658-e33a6d0d50f6?q=80&w=800&auto=format&fit=crop',
-    category: 'Accessories',
+    category: 'Аксесуари',
     specs: [
-      { label: 'Material', value: '99.999% Silver' },
-      { label: 'Length', value: '3 Meters' }
+      { label: 'Матеріал', value: '99.999% Срібло' },
+      { label: 'Довжина', value: '3 метри' }
     ]
   }
 ];

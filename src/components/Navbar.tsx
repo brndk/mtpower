@@ -16,13 +16,13 @@ export const Navbar: React.FC = () => {
         <div className="flex gap-4 md:gap-8 items-center overflow-hidden">
           <Link to="/" className="lg:hidden text-lg font-bold tracking-tighter text-white">MT <span className="accent serif italic">A</span></Link>
           <div className="hidden sm:block h-4 w-[1px] bg-white/20 lg:hidden"></div>
-          <h2 className="serif text-sm md:text-xl whitespace-nowrap">Professional Sound Solutions</h2>
+          <h2 className="serif text-sm md:text-xl whitespace-nowrap">Професійні звукові рішення</h2>
         </div>
 
         <div className="flex gap-4 md:gap-8 items-center">
           <div className="hidden md:block text-right">
-            <p className="text-[10px] uppercase text-white/40 tracking-wider">Shopping Bag</p>
-            <p className="text-xs font-bold">{cartCount} Items — ${cartTotal.toLocaleString()}</p>
+            <p className="text-[10px] uppercase text-white/40 tracking-wider">Кошик</p>
+            <p className="text-xs font-bold">{cartCount} Товарів — ${cartTotal.toLocaleString()}</p>
           </div>
           
           <Link to="/cart" className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center cursor-pointer hover:border-accent transition-colors group">
@@ -45,8 +45,8 @@ export const Navbar: React.FC = () => {
             className="lg:hidden bg-smoke border-t border-white/10 overflow-hidden"
           >
             <div className="px-6 py-6 space-y-4">
-              <Link to="/" onClick={() => setIsOpen(false)} className="block text-sm font-bold uppercase tracking-widest text-accent">Store</Link>
-              <Link to="/cart" onClick={() => setIsOpen(false)} className="block text-sm font-bold uppercase tracking-widest text-white/50 hover:text-white">Cart</Link>
+              <Link to="/" onClick={() => setIsOpen(false)} className="block text-sm font-bold uppercase tracking-widest text-accent">Магазин</Link>
+              <Link to="/cart" onClick={() => setIsOpen(false)} className="block text-sm font-bold uppercase tracking-widest text-white/50 hover:text-white">Кошик</Link>
             </div>
           </motion.div>
         )}

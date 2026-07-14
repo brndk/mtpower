@@ -43,24 +43,24 @@ export const Admin: React.FC = () => {
           className="bg-smoke border border-white/10 p-8 md:p-12 rounded-3xl w-full max-w-md shadow-2xl"
         >
           <div className="text-center mb-10">
-            <h1 className="text-3xl font-display font-bold text-white mb-2 tracking-tighter">RESTRICTED ACCESS</h1>
-            <p className="text-white/40 text-xs uppercase tracking-[0.2em]">Authorized Personnel Only</p>
+            <h1 className="text-3xl font-display font-bold text-white mb-2 tracking-tighter">ОБМЕЖЕНИЙ ДОСТУП</h1>
+            <p className="text-white/40 text-xs uppercase tracking-[0.2em]">Тільки для уповноваженого персоналу</p>
           </div>
 
           <form onSubmit={handleLogin} className="space-y-6">
             <div>
-              <label className="block text-[10px] uppercase tracking-widest text-white/50 mb-2 font-bold">Username</label>
+              <label className="block text-[10px] uppercase tracking-widest text-white/50 mb-2 font-bold">Ім'я користувача</label>
               <input 
                 autoFocus
                 type="text"
                 value={loginData.user}
                 onChange={e => setLoginData({...loginData, user: e.target.value})}
                 className="w-full bg-ash border border-white/10 rounded-xl p-4 text-white outline-none focus:border-accent transition-colors"
-                placeholder="User ID"
+                placeholder="ID користувача"
               />
             </div>
             <div>
-              <label className="block text-[10px] uppercase tracking-widest text-white/50 mb-2 font-bold">Secret Key</label>
+              <label className="block text-[10px] uppercase tracking-widest text-white/50 mb-2 font-bold">Секретний ключ</label>
               <input 
                 type="password"
                 value={loginData.pass}
@@ -74,11 +74,11 @@ export const Admin: React.FC = () => {
               type="submit"
               className="w-full btn-primary py-5 text-xs tracking-[0.4em]"
             >
-              Verify Identity
+              Підтвердити особу
             </button>
           </form>
           <div className="mt-8 pt-8 border-t border-white/5 text-center">
-             <p className="text-[9px] text-white/20 uppercase tracking-widest">MT Power Audio Management Portal</p>
+             <p className="text-[9px] text-white/20 uppercase tracking-widest">Панель управління MT Power Audio</p>
           </div>
         </motion.div>
       </div>
@@ -102,7 +102,7 @@ export const Admin: React.FC = () => {
   };
 
   const handleDelete = (id: string) => {
-    if (window.confirm('Are you sure you want to delete this product?')) {
+    if (window.confirm('Ви впевнені, що хочете видалити цей товар?')) {
       removeProduct(id);
     }
   };
@@ -111,15 +111,15 @@ export const Admin: React.FC = () => {
     <div className="pt-24 pb-24 max-w-7xl mx-auto px-4">
       <div className="flex justify-between items-center mb-12">
         <div>
-          <h1 className="text-4xl font-display font-bold text-white mb-2">Inventory Management</h1>
-          <p className="text-white/50">Manage your premium product catalog.</p>
+          <h1 className="text-4xl font-display font-bold text-white mb-2">Управління запасами</h1>
+          <p className="text-white/50">Керуйте каталогом преміальних товарів.</p>
         </div>
         <button 
           onClick={() => { setIsAdding(true); setFormData(initialForm); }}
           className="bg-gold text-ash px-6 py-3 rounded-full font-bold flex items-center space-x-2 hover:scale-105 transition-all"
         >
           <Plus size={20} />
-          <span>New Product</span>
+          <span>Новий товар</span>
         </button>
       </div>
 
@@ -168,7 +168,7 @@ export const Admin: React.FC = () => {
               className="relative bg-smoke border border-white/10 w-full max-w-2xl rounded-3xl p-8 max-h-[90vh] overflow-y-auto"
             >
               <div className="flex justify-between items-center mb-8">
-                <h2 className="text-2xl font-bold">{isEditing ? 'Edit Product' : 'Add New Product'}</h2>
+                <h2 className="text-2xl font-bold">{isEditing ? 'Редагувати товар' : 'Додати новий товар'}</h2>
                 <button onClick={() => { setIsEditing(null); setIsAdding(false); }} className="p-2 hover:bg-white/10 rounded-full">
                   <X />
                 </button>
@@ -176,7 +176,7 @@ export const Admin: React.FC = () => {
 
               <div className="space-y-6">
                 <div>
-                  <label className="block text-sm font-medium text-white/50 mb-2 uppercase tracking-widest">Name</label>
+                  <label className="block text-sm font-medium text-white/50 mb-2 uppercase tracking-widest">Назва</label>
                   <input 
                     value={formData.name}
                     onChange={e => setFormData({ ...formData, name: e.target.value })}
@@ -185,7 +185,7 @@ export const Admin: React.FC = () => {
                 </div>
                 <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm font-medium text-white/50 mb-2 uppercase tracking-widest">Price ($)</label>
+                    <label className="block text-sm font-medium text-white/50 mb-2 uppercase tracking-widest">Ціна ($)</label>
                     <input 
                       type="number"
                       value={formData.price}
@@ -194,7 +194,7 @@ export const Admin: React.FC = () => {
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-white/50 mb-2 uppercase tracking-widest">Category</label>
+                    <label className="block text-sm font-medium text-white/50 mb-2 uppercase tracking-widest">Категорія</label>
                     <input 
                       value={formData.category}
                       onChange={e => setFormData({ ...formData, category: e.target.value })}
@@ -203,7 +203,7 @@ export const Admin: React.FC = () => {
                   </div>
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-white/50 mb-2 uppercase tracking-widest">Image URL</label>
+                  <label className="block text-sm font-medium text-white/50 mb-2 uppercase tracking-widest">URL зображення</label>
                   <div className="flex space-x-2">
                     <input 
                       value={formData.image}
@@ -216,7 +216,7 @@ export const Admin: React.FC = () => {
                   </div>
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-white/50 mb-2 uppercase tracking-widest">Description</label>
+                  <label className="block text-sm font-medium text-white/50 mb-2 uppercase tracking-widest">Опис</label>
                   <textarea 
                     rows={4}
                     value={formData.description}
@@ -230,7 +230,7 @@ export const Admin: React.FC = () => {
                   className="w-full gold-gradient text-ash font-bold py-5 rounded-2xl flex items-center justify-center space-x-2 text-lg"
                 >
                   <Save size={20} />
-                  <span>{isEditing ? 'Save Changes' : 'Publish Product'}</span>
+                  <span>{isEditing ? 'Зберегти зміни' : 'Опублікувати товар'}</span>
                 </button>
               </div>
             </motion.div>
